@@ -18,8 +18,9 @@ h3 {
 }
 
 body {
-    margin: 0;
+    margin: 0 0 -10vh 0;
     font-family: "MedievalSharp";
+    background-image: url(../img/smoke-bg.jpg);
 }
 
 /* header */
@@ -430,4 +431,46 @@ nav {
     padding: 2vh;
     text-transform: uppercase;
     border-radius: 10px;
+}
+
+/* footer */
+
+footer {
+    background-image: url(../img/smoke-bg.jpg);
+    position: relative;
+    top: -4vh;
+}
+
+.end-text {
+    display: flex;
+    border-top: 1px solid burlywood;
+    border-bottom: 1px solid burlywood;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.end-copyright p {
+    color: white;
+}
+
+.end-copyright h2 {
+    color: burlywood;
+    text-transform: uppercase;
+}
+
+.end-list {
+    display: flex;
+}
+
+.end-list ul {
+    list-style: none;
+}
+
+.end-list ul li {
+    color: burlywood;
+}
+
+.end-list ul li a {
+    text-decoration: none;
+    color: burlywood;
 }
