@@ -1,0 +1,433 @@
+@font-face {
+    font-family: "MedievalSharp";
+    src: url(../fonts/MedievalSharp/MedievalSharp-Regular.ttf);
+}
+
+@font-face {
+    font-family: "GothicA1";
+    src: url("../fonts/Gothic_A1/GothicA1-Regular.ttf");
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 28px
+}
+
+body {
+    margin: 0;
+    font-family: "MedievalSharp";
+}
+
+/* header */
+
+nav {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    width: 160px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.header-list ul {
+    list-style: none;
+    display: flex;
+    gap: 3vh;
+}
+
+.header-list ul li a {
+    text-decoration: none;
+    color: burlywood;
+}
+
+.header-list ul li:last-child a {
+    color: black;
+    background-color: burlywood;
+    padding: 1vh 2vh;
+    border-radius: 5px;
+}
+
+/* main */
+/* presentation - section 1 */
+
+#presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentation-video {
+    width: 100%;
+}
+
+.presentation-video video {
+    width: 100%;
+}
+
+.presentation-text {
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    top: -24vh;
+    margin-bottom: -20vh;
+}
+
+.presentation-text h1 {
+    color: burlywood;
+}
+
+.presentation-text a {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.61);
+    backdrop-filter: blur(10px);
+    padding: 1vh 2vh;
+    color: white;
+    border: 2px solid burlywood;
+    border-radius: 5px;
+}
+
+/* races - section 2 */
+
+#races {
+    background-image: url(../img/smoke-bg.jpg); 
+    background-size: cover;
+    background-position: initial;
+    padding-top: 20vh;
+    padding-bottom: 4vh;
+}
+
+.dev-fond {
+    width: 100%;
+}
+
+.dev-fond img {
+    width: 100%;
+}
+
+.dev {
+    display: flex;
+    justify-content: center;
+}
+
+.dev-cadre {
+    display: flex;
+    position: relative;
+    background-image: url(../img/awards-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid burlywood;
+    border-radius: 10px;
+    align-items: center;
+    padding: 1vw 2vh;
+    gap: 2vw;
+}
+
+.dev p {
+    color: white;
+    margin-bottom: 0;
+}
+
+.dev-text h2{
+    color: burlywood;
+    text-transform: uppercase;
+}
+
+.titre h2 {
+    color: burlywood;
+    text-transform: uppercase;
+    margin-left: 10vw;
+    margin-top: 16vh;
+}
+
+.dev-image {
+    width: 20vh;
+}
+
+.dev-image img {
+    width: 100%;
+}
+
+.race-presentation {
+    color: burlywood;
+    text-transform: uppercase;
+    margin: 6vh 16vw;
+    display: flex;
+    
+    gap: 4vh;
+}
+
+.race-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid burlywood;
+    border-radius: 10px;
+    padding: 2vw;
+    background-image: url(../img/races-bg.jpg);
+    background-size: cover;
+    flex: 1;
+}
+
+.race-logo-text {
+    text-align: center;
+    width: 26%;
+}
+
+.race-logo-text img {
+    width: 50%;
+}
+
+.race-description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid burlywood;
+    padding: 2vw;
+    border-radius: 10px;
+    flex: 1;
+
+}
+
+.race-description-image {
+    width: 10vh;
+}
+
+.race-description-image img {
+    width: 100%;
+}
+
+
+
+.decoration-line {
+    width: 2%;
+    position: relative;
+    transform: translateX(-100px);
+}
+
+.race-description p {
+    font-family: "GothicA1";
+    text-transform: lowercase;
+    
+}
+
+.race-description p::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: burlywood;
+}
+
+/* editions - section 3 */
+
+#editions {
+    background-image: url(../img/buy-now-background.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.edition-image {
+    flex: 0.8;
+    padding-left: 10vh;
+}
+
+.edition-image img {
+    width: 100%;
+}
+
+.edition {
+    flex: 1;
+}
+
+.edition p {
+    color: white;
+    font-family: "GothicA1";
+}
+
+.edition p:first-of-type{
+    margin-bottom: 0;
+}
+
+.edition h2 {
+    text-transform: uppercase;
+    color: burlywood;
+    margin-top: 0;
+}
+
+.edition ul {
+    display: flex;
+    gap: 0.5vh;
+    list-style: none;
+    padding: 2vh 0 4vh 0;
+}
+
+.edition ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.61);
+    backdrop-filter: blur(10px);
+    border: 2px solid burlywood;
+    border-radius: 10px;
+    padding: 2vh;
+}
+
+/* news section 4 */
+
+#news {
+    background-image: url(../img/smoke-bg.jpg);
+    background-size: cover;
+    position: relative;
+    top: -3vh;
+}
+
+/* News & Update */
+
+.titre-news {
+    margin: 0 10vh;
+}
+
+.titre-news p {
+    margin-bottom: 0;
+    color: white;
+    padding-top: 8vh;
+}
+
+.titre-news h2 {
+    color: burlywood;
+    text-transform: uppercase;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards h3 {
+    color: burlywood;
+    padding: 2vh 4vh 0 4vh;
+    text-transform: uppercase;
+}
+
+.cards p {
+    color: white;
+    padding: 0 4vh;
+}
+
+.cards a {
+    text-decoration: none;
+    margin: 0 0 2vh 4vh;
+    text-transform: uppercase;
+    color: burlywood;
+}
+
+.card-item {
+    width: 25%;
+    border: 2px solid burlywood;
+    border-radius: 10px;
+}
+
+.card-primary {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/news-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-secondary {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/news-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-thirst {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/news-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Community */
+
+.titre-community {
+    text-align: end;
+    padding: 5vh 14vh;
+}
+
+.titre-community p {
+    color: white;
+}
+
+.titre-community h2 {
+    color: burlywood;
+}
+
+.fanart {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vh;
+    justify-content: center;
+    margin: 0 4vh;
+
+}
+
+.fanart img {
+    width: 45vh;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* dowloads - section */
+
+#downloads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.downloads-text {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/cta-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid burlywood;
+    margin: 40vh;
+    padding: 8vh;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+
+.downloads-text p {
+    color: white;
+}
+
+.downloads-text h2 {
+    color: burlywood;
+    text-transform: uppercase;
+}
+
+.downloads-text a {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.61);
+    backdrop-filter: blur(10px);
+    border: 2px solid burlywood;
+    padding: 2vh;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
