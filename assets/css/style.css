@@ -17,13 +17,26 @@ h3 {
     font-size: 28px
 }
 
+main {
+    background-image: url(../img/smoke-bg.jpg);
+    background: fixed;
+}
+
 body {
-    margin: 0 0 -10vh 0;
+    margin: 0;;
     font-family: "MedievalSharp";
     background-image: url(../img/smoke-bg.jpg);
 }
 
+p{
+    font-family: "GothicA1";
+}
+
 /* header */
+
+header {
+    max-width: 100%;
+}
 
 nav {
     display: flex;
@@ -32,6 +45,12 @@ nav {
     justify-content: space-around;
     width: 100%;
     z-index: 1;
+    background-image: url(../img/cloud-header.png);
+    background-size: contain;
+}
+
+.menu-deroulant {
+    display: none;
 }
 
 .logo {
@@ -70,11 +89,17 @@ nav {
 }
 
 .presentation-video {
-    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    object-position:center;
 }
 
 .presentation-video video {
+    /* position: absolute; /
+    / z-index: -2; */
+    height: 100%;
     width: 100%;
+    object-fit:cover;
 }
 
 .presentation-text {
@@ -91,9 +116,9 @@ nav {
 
 .presentation-text a {
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.61);
+    background-color: rgba(0, 0, 0, 0.41);
     backdrop-filter: blur(10px);
-    padding: 1vh 2vh;
+    padding: 2vh 4vh;
     color: white;
     border: 2px solid burlywood;
     border-radius: 5px;
@@ -102,7 +127,7 @@ nav {
 /* races - section 2 */
 
 #races {
-    background-image: url(../img/smoke-bg.jpg); 
+    
     background-size: cover;
     background-position: initial;
     padding-top: 20vh;
@@ -201,7 +226,32 @@ nav {
     padding: 2vw;
     border-radius: 10px;
     flex: 1;
+    position: relative;
+}
 
+
+.race-description h2 {
+    display: block;
+    width: 48%;
+    box-shadow: 0 1px 0 burlywood;
+    margin-bottom: 2.5px;
+    padding-bottom: 2vh;
+}
+
+.decoration-line {
+    background-image: url(../svg/decoration-line--before.svg);
+    width: 12px;
+    height: 10px;
+    position: relative;
+    right: 25%;
+    bottom: 1vh;
+}
+
+.race-description h2::after {
+    content: "";
+    height: 1px;
+    width: 40%;
+    border-bottom: 2px solid burlywood;
 }
 
 .race-description-image {
@@ -214,17 +264,14 @@ nav {
 
 
 
-.decoration-line {
-    width: 2%;
-    position: relative;
-    transform: translateX(-100px);
-}
+
 
 .race-description p {
     font-family: "GothicA1";
     text-transform: lowercase;
-    
+
 }
+
 
 .race-description p::after {
     content: "";
@@ -292,16 +339,14 @@ nav {
 /* news section 4 */
 
 #news {
-    background-image: url(../img/smoke-bg.jpg);
-    background-size: cover;
     position: relative;
-    top: -3vh;
+    margin: 0 auto;
 }
 
 /* News & Update */
 
 .titre-news {
-    margin: 0 10vh;
+    margin: 0 12vh;
 }
 
 .titre-news p {
@@ -366,15 +411,17 @@ nav {
 
 .titre-community {
     text-align: end;
-    padding: 5vh 14vh;
+    padding: 5vh 14vh 0 0;
 }
 
 .titre-community p {
     color: white;
+    margin-bottom: 0;
 }
 
 .titre-community h2 {
     color: burlywood;
+    margin-top: 1vh;
 }
 
 .fanart {
@@ -436,9 +483,9 @@ nav {
 /* footer */
 
 footer {
-    background-image: url(../img/smoke-bg.jpg);
-    position: relative;
+    width: 100%;
     top: -4vh;
+    box-sizing: border-box;
 }
 
 .end-text {
@@ -447,6 +494,11 @@ footer {
     border-bottom: 1px solid burlywood;
     width: 80%;
     margin: 0 auto;
+}
+
+.end-copyright {
+    flex: 1;
+    width: 100%;
 }
 
 .end-copyright p {
@@ -460,17 +512,214 @@ footer {
 
 .end-list {
     display: flex;
+    width: 100vh;
+    flex: 2;
+    justify-content: space-around;
 }
 
 .end-list ul {
     list-style: none;
+    padding-left: 0;
 }
 
 .end-list ul li {
+    margin: 2vh;
+}
+
+.end-list ul li:first-of-type {
     color: burlywood;
+    margin-bottom: 2vh;
+    font-size: 24px;
+    text-transform: uppercase;
 }
 
 .end-list ul li a {
     text-decoration: none;
-    color: burlywood;
+    color: #deb887;
+    font-family: "GothicA1";
+}
+
+.terms ul {
+    list-style: none;
+    display: flex;
+    gap: 2vh;
+    margin-left: 16vh;
+}
+
+.terms ul li {
+    text-decoration: none;
+    color: white;
+    font-family: "GothicA1";
+}
+
+@keyframes slidy {
+    0% { left: 0%; }
+    100% { left: -300%; }
+  }
+
+@media screen and (max-width: 768px) {
+    
+    main {
+        margin: 0 auto;
+    }
+
+    .presentation-video {
+        width: inherit;
+        height: 100%;
+    }
+    
+    .presentation-video video {
+        height: 100vh;
+    }
+
+    .logo {
+        width: 120px;
+    }
+    
+    .header-list {
+        display: none;
+    }
+    
+    nav {
+        align-items: flex-start;
+        justify-content: space-between;
+        background-repeat: no-repeat;
+    }
+
+    .menu-deroulant {
+        display: inline-block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        margin: 2vh 2vh 0 0;
+    }
+
+    .menu-deroulant img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* races */
+
+    .dev-cadre {
+        flex-wrap: wrap;
+        justify-content: baseline;
+        margin: 0 2vh;
+    }
+
+    
+    .dev-text {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .dev-image {
+        width: 23%;
+    }
+    
+    #races {
+        padding-top: 10vh;
+    }
+
+    
+    .race-presentation {
+        flex-direction: column;
+        overflow: hidden;
+
+    }
+
+    .race-logo-text {
+        width: 100%;
+        height: auto; 
+        float: left;
+        gap: 10vh;
+        animation: 20s slidy infinite;
+        position: relative;
+    }
+
+
+    .race-list {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 2vh;
+    }
+
+    /* editions */
+
+    .edition-image {
+        display: none;
+    }
+
+    .edition ul {
+        flex-wrap: wrap;
+        gap: 6vh;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .edition {
+        text-align: center;
+    }
+
+/* news */
+
+    .titre-news {
+        margin: 0 2vh;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 2vh;
+        margin: 0 2vh;
+    }
+
+    .card-item {
+        width: inherit;
+    }
+
+/* community */
+
+    .titre-community {
+        padding: 0;
+        margin-right: 2vh;
+        margin-top: 8vh;
+    }
+
+/* downloads */
+
+    .downloads-text {
+        margin: 4vh;
+        padding: 2vh;
+        background-position: center;
+        background-size: 100%;
+    }
+
+/* footer */
+
+    .end-text {
+        display: inherit;
+    }
+
+    .end-list ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .end-list {
+        flex-direction: column;
+        width: inherit;
+    }
+
+    .terms {
+        display: flex;
+    }
+
+    .terms ul {
+        gap: 2vh;
+        margin: 4vh;
+        padding: 0;
+    }
 }
