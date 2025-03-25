@@ -554,7 +554,7 @@ footer {
 
 @keyframes slidy {
     0% { left: 0%; }
-    100% { left: -300%; }
+    100% { left: -100%; }
   }
 
 @media screen and (max-width: 768px) {
@@ -633,8 +633,11 @@ footer {
         height: auto; 
         float: left;
         gap: 10vh;
-        animation: 20s slidy infinite;
         position: relative;
+    }
+
+    .race-logo-text img {
+        width: 75px;
     }
 
 
@@ -642,6 +645,7 @@ footer {
         flex-wrap: nowrap;
         justify-content: flex-start;
         gap: 2vh;
+        overflow-x: scroll;
     }
 
     /* editions */
