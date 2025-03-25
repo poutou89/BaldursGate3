@@ -559,6 +559,15 @@ footer {
 
 @media screen and (max-width: 768px) {
     
+    h2 {
+        font-weight: bolder;
+        font-size: 24px;
+    }
+    
+    h3 {
+        font-size: 20px
+    }
+
     main {
         margin: 0 auto;
     }
@@ -625,7 +634,7 @@ footer {
     .race-presentation {
         flex-direction: column;
         overflow: hidden;
-
+        margin: 6vh 2vh;
     }
 
     .race-logo-text {
@@ -650,8 +659,8 @@ footer {
 
     /* editions */
 
-    .edition-image {
-        display: none;
+    #editions {
+        flex-direction: column-reverse;
     }
 
     .edition ul {
@@ -691,39 +700,57 @@ footer {
         margin-top: 8vh;
     }
 
+    .fanart {
+        width: 100%;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+
+    .fanart img {
+        width: 40%;
+    }
+
 /* downloads */
 
     .downloads-text {
         margin: 4vh;
         padding: 2vh;
-        background-position: center;
-        background-size: 100%;
+        background-position: left;
+        background-size: 100vh 100%;
     }
 
 /* footer */
 
     .end-text {
         display: inherit;
+        text-align: center;
     }
 
     .end-list ul {
         display: flex;
         flex-direction: column;
         padding: 0;
+        text-align: center;
     }
 
     .end-list {
-        flex-direction: column;
-        width: inherit;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
     }
 
     .terms {
         display: flex;
+        justify-content: center;
+        text-align: center;
     }
 
     .terms ul {
         gap: 2vh;
         margin: 4vh;
         padding: 0;
+        flex-direction: column;
     }
 }
